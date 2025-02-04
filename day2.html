@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-shadow: 0px 0px 10px cyan,
+            0px 0px 20px cyan,
+            0px 0px 30px cyan,
+            0px 0px 40px cyan;
+            font-family: 'Tamil Sangam', sans-serif;
+            font-size: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            }
+
+            
+        #contact {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 40px auto;
+        }
+
+        #contact h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #contact label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact input[type="submit"] {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact input[type="submit"]:hover {
+            box-shadow: 0 0 20px cyan (255, 0, 0, 0.8);
+        -webkit-box-shadow: 0 0 20px rgba(0, 174, 255, 0.8);
+        -moz-box-shadow: 0 0 20px rgba(0, 162, 255, 0.8);
+      
+        }
+
+       #contact {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        margin: 40px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #contact:hover {
+        box-shadow: 0 0 20px cyan (255, 0, 0, 0.8);
+        -webkit-box-shadow: 0 0 20px rgba(0, 174, 255, 0.8);
+        -moz-box-shadow: 0 0 20px rgba(0, 162, 255, 0.8);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+</style>
+
+    </style>
+</head>
+<body>
+    
+    <h1>Contac</h1>
+
+    <div>
+        <div id="contact">
+    <h2>Hubungi Kami</h2>
+    <form>
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message"></textarea><br><br>
+        <input type="submit" value="Kirim">
+    </form>
+</div>
+    </div>
+
+</body>
+</html>
