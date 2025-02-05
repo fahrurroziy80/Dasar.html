@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pre-Order Makanan Khas Daerah</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #623427;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label {
+    margin-top: 10px;
+    color: #555;
+
+}
+
+input, textarea, select {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Pre-Order Makanan Khas Daerah</h1>
+        <form action="/submit-preorder" method="post">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Nomor Telepon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Alamat:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="food">Pilih Makanan:</label>
+            <select id="food" name="food" required>
+                <option value="ayam-taliwang">Ayam Taliwang</option>
+                <option value="sate-rembiga">Sate Rembiga</option>
+                <option value="plecing-kangkung">Plecing Kangkung</option>
+            </select>
+
+            <label for="quantity">Jumlah:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </div>
+</body>
+</html>
