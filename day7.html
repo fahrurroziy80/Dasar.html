@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efek Gelombang Melingkar</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        .gelombang {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border: 5px solid #4CAF50;
+            border-radius: 50%;
+            animation: pulse 2s infinite linear;
+        }
+
+        .gelombang::before,
+        .gelombang::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid #4CAF50;
+            opacity: 0.5;
+            animation: pulse 2s infinite linear;
+        }
+
+        .gelombang::before {
+            animation-delay: 0.5s;
+        }
+
+        .gelombang::after {
+            animation-delay: 1s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.4;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .Nama {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            text-shadow: 0px 0px 10px #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="gelombang">
+        <center>🏆</center>
+        <center><h1> 💓</h1></center>
+    
+        <div class="gelombang::before"><center><h1>❤️</h1></center></div>
+    </div>
+    <div>
+        <h1 class="Nama">fahrurrozi</h1>
+    </div>
+</body>
+</html>
