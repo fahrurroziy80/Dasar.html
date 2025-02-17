@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Symbol dengan Musik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #16001e, #000);
+            overflow: hidden;
+        }
+
+        .love {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: #ff0055;
+            transform: rotate(-45deg);
+            box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .love::before,
+        .love::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #ff0055;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055;
+        }
+
+        .love::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .love::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1) rotate(-45deg); }
+            25% { transform: scale(1.1) rotate(-45deg); }
+            50% { transform: scale(1) rotate(-45deg); }
+            75% { transform: scale(1.2) rotate(-45deg); }
+            100% { transform: scale(1) rotate(-45deg); }
+        }
+
+        .music-btn {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff0055;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #ff0055;
+            transition: 0.3s;
+        }
+
+        .music-btn:hover {
+            background: #ff3385;
+            box-shadow: 0 0 25px #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="love"></div>
+    <button class="music-btn" onclick="toggleMusic()">💖 Play Music</button>
+
+    <audio id="loveMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung pemutar audio.
+    </audio>
+
+    <script>
+        let music = document.getElementById("loveMusic");
+        let btn = document.querySelector(".music-btn");
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                btn.innerHTML = "💖 Play Music";
+            } else {
+                music.play();
+                btn.innerHTML = "💞 Pause Music";
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+
+</body>
+</html>
